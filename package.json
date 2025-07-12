@@ -1,0 +1,44 @@
+{
+  "name": "online-tools",
+  "version": "1.0.0",
+  "description": "在线工具网站，包含图片压缩、图片水印、图片裁剪、图片格式转换和文件转换功能",
+  "private": true,
+  "workspaces": [
+    "online-tools",
+    "online-tools/client"
+  ],
+  "main": "online-tools/server/index.js",
+  "scripts": {
+    "start": "node online-tools/server/index.js",
+    "dev:server": "nodemon online-tools/server/index.js",
+    "client:install": "cd online-tools/client && npm install",
+    "client:build": "cd online-tools/client && npm run build",
+    "client:dev": "cd online-tools/client && npm run serve",
+    "dev": "concurrently \"npm run dev:server\" \"npm run client:dev\"",
+    "install-all": "npm install"
+  },
+  "keywords": [
+    "image",
+    "tools",
+    "compression",
+    "watermark",
+    "conversion"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs-extra": "^10.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "sharp": "^0.30.7",
+    "uuid": "^8.3.2",
+    "vue-cropper": "^1.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

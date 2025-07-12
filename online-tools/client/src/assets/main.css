@@ -1,0 +1,109 @@
+/* 全局CSS样式 */
+
+/* 颜色变量 */
+:root {
+    --primary-color: #fb7299;
+    --secondary-color: #00a1d6;
+    --text-color: #2c3e50;
+    --text-light-color: #606266;
+    --border-color: #ebeef5;
+    --background-color: #f6f7f9;
+    --white-color: #ffffff;
+    --success-color: #67c23a;
+    --warning-color: #e6a23c;
+    --danger-color: #f56c6c;
+    --info-color: #909399;
+}
+
+/* 基础样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+/* 通用布局样式 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    margin: 40px 0;
+}
+
+/* 按钮样式覆盖 */
+.el-button--primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.el-button--primary:hover,
+.el-button--primary:focus {
+    background-color: #ff85ad;
+    border-color: #ff85ad;
+}
+
+/* 表单样式覆盖 */
+.el-slider__bar {
+    background-color: var(--primary-color);
+}
+
+.el-slider__button {
+    border-color: var(--primary-color);
+}
+
+/* 卡片样式 */
+.card {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* 动画过渡 */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+    .hidden-mobile {
+        display: none !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .hidden-tablet {
+        display: none !important;
+    }
+} 
